@@ -4,8 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "041b6855f41909ff19e0291512a5a6d2",
+    "content-hash": "fd07a518c288645a897adb6872258a89",
     "packages": [
+        {
+            "name": "beyondcode/calendar",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/Calendar",
+                "reference": "228a800685582071154ff35ba1471d7e7a578762"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Beyondcode\\Calendar\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Beyondcode\\Calendar\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova tool.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -9065,7 +9101,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "beyondcode/calendar": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
